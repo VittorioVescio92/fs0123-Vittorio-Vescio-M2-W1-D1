@@ -179,66 +179,71 @@ footer a {
     color: fuchsia;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width:769px){
     body{ 
         font-size: 1.55rem;
     }
     h1{
-        font-size: 6rem;
-        line-height: 5.5rem;
+        font-size: 5.5rem;
+    } 
+    header {
+        text-align: left;
+        margin: 0;
+    }
+    header div img{
+        margin: 0;
+        display:inline-block;
+        
+    }
+    header div p{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    header div, nav{
+        display: inline-block;
+        vertical-align: middle;
+    }
+  header nav{
+    text-align: right;
+  }
+    header ul li{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    table{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        margin-inline: auto;
+        width: 80%;
+        font-size: 1.2rem;
+    }
+
+    iframe, section {
+        display: inline-block;
+        height: 300px;
+        width: 49%;
+        vertical-align: middle;
+        margin: 0;
     }
    
-    header div img {
-        width: 160px;
+    section h2{
+        font-size: 1.3rem;
+        background-color: #a3a3a3;
+        text-transform: capitalize;
     }
-    
-    header nav li {
+ 
+    aside div{ 
         display: inline-block;
-        margin-inline: 0.5rem;
+        vertical-align: middle;
+        width: 33%;
+        height: 200px
     }
-
-    table{
-        width: 75%;
-        text-align: center;
-        margin-inline: auto;
-        margin-block: 50px;
-    }
-
-    thead tr {
-        font-size: 1.2rem;
 }
 
-iframe {
-    width: 100%;
-    height: 140px;
-    margin: 0;
-    border-radius: 20px;
-}
 
-input {
-    padding: 15px;
-    width: 300px;
-}
-button {
-    padding: 15px;
-    width: 100px;    
-}
 
-section h2{
-    font-size: 2rem;
-    background-color: #a3a3a3;
-    text-transform: capitalize;
-}
+Invia un messaggio in Lounge
 
-aside h2{
-    font-size: 3rem;    
-}
-
-footer{
-    font-size: 1.5rem;
-}       
-        
-}
 
 @media screen and (max-width: 768px) {
     body{ 
@@ -247,16 +252,10 @@ footer{
     h1{
         font-size: 5.5rem;
         line-height: 5.5rem;
-    }
-   
-    header div img {
-        width: 160px;
-        margin-bottom:13px;
-    }
-    
-    header nav li {
-        display: inline-block;
-        margin-inline: 0.5rem;
+    } 
+
+    header nav{
+        display: inline;
     }
 
     table{
@@ -347,4 +346,28 @@ aside h2{
 footer{
     font-size: 1.4rem;
 }
+}
+
+@media print {
+    body{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    header{
+        display: none;
+    }
+    main{
+        box-shadow: none;
+    }
+    iframe{
+        display: none;
+    }
+    section{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
 }
